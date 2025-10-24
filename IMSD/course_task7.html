@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Recommendation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 40px;
+        }
+
+        .recommendations {
+            max-width: 600px;
+            margin: auto;
+        }
+
+        .recommendation-card {
+            background: white;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 10px;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+        }
+
+        input, button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            font-size: 16px;
+        }
+
+        button {
+            background-color: #2980b9;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #3498db;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="recommendations">
+        <h2>Recommendations</h2>
+        <div id="recommendationList">
+            <div class="recommendation-card"><p>Excellent teamwork skills.</p></div>
+            <div class="recommendation-card"><p>Strong problem-solving abilities.</p></div>
+            <div class="recommendation-card"><p>Highly creative and innovative.</p></div>
+        </div>
+        <input type="text" id="newRec" placeholder="Add a new recommendation">
+        <button onclick="addRecommendation()">Submit Recommendation</button>
+    </div>
+
+    <script>
+        function addRecommendation() {
+            const input = document.getElementById("newRec");
+            if(input.value.trim() === "") {
+                alert("Please enter a recommendation!");
+                return;
+            }
+            const newCard = document.createElement("div");
+            newCard.className = "recommendation-card";
+            newCard.innerHTML = `<p>${input.value}</p>`;
+            document.getElementById("recommendationList").appendChild(newCard);
+            input.value = "";
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recommendation Pop-up</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 50px;
+        }
+        input, button {
+            padding: 10px;
+            margin-top: 10px;
+            width: 300px;
+            font-size: 16px;
+        }
+        button {
+            background-color: #2980b9;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #3498db;
+        }
+    </style>
+</head>
+<body>
+    <h2>Leave a Recommendation</h2>
+    <input type="text" id="recInput" placeholder="Write your recommendation">
+    <br>
+    <button onclick="submitRecommendation()">Submit</button>
+
+    <script>
+        function submitRecommendation() {
+            const input = document.getElementById("recInput");
+            if(input.value.trim() === "") {
+                alert("Please enter a recommendation!");
+            } else {
+                alert("Thank you for leaving a recommendation!");
+                input.value = "";
+            }
+        }
+    </script>
+</body>
+</html>

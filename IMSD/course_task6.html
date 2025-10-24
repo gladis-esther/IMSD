@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recommendations Section</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #f4f4f4; margin: 20px; }
+        .recommendations { max-width: 600px; margin: auto; }
+        .recommendation-card {
+            background: white; border-radius: 10px; padding: 15px;
+            margin-bottom: 10px; box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+        }
+        .recommendation-card p { margin: 0; color: #34495e; }
+        input, button { padding: 8px; margin-top: 10px; width: 100%; }
+        button { background: #2980b9; color: white; border: none; cursor: pointer; }
+        button:hover { background: #3498db; }
+    </style>
+</head>
+<body>
+
+    <div class="recommendations">
+        <h2>Recommendations</h2>
+        <div id="recommendationList">
+            <div class="recommendation-card"><p>Excellent teamwork skills.</p></div>
+            <div class="recommendation-card"><p>Strong problem-solving abilities.</p></div>
+            <div class="recommendation-card"><p>Highly creative and innovative.</p></div>
+        </div>
+        <input type="text" id="newRec" placeholder="Add new recommendation">
+        <button onclick="addRecommendation()">Submit Recommendation</button>
+    </div>
+
+    <script>
+        function addRecommendation() {
+            const input = document.getElementById("newRec");
+            if(input.value.trim() === "") { alert("Enter a recommendation!"); return; }
+            const card = document.createElement("div");
+            card.className = "recommendation-card";
+            card.innerHTML = `<p>${input.value}</p>`;
+            document.getElementById("recommendationList").appendChild(card);
+            input.value = "";
+            alert("Thank you for leaving a recommendation!");
+        }
+    </script>
+
+</body>
+</html>

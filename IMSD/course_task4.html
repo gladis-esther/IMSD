@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills Section</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .skills-section {
+            max-width: 900px;
+            margin: 50px auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .skills-section h2 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 30px;
+        }
+
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .skill-card {
+            width: 150px;
+            height: 150px;
+            background-color: #ecf0f1;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 15px;
+            transition: transform 0.3s;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .skill-card img {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 10px;
+        }
+
+        .skill-card p {
+            margin: 0;
+            font-weight: bold;
+            color: #34495e;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="skills-section">
+        <h2>My Skills</h2>
+        <div class="skills-container">
+            <!-- Existing Skills -->
+            <div class="skill-card">
+                <img src="html_logo.png" alt="HTML Logo">
+                <p>HTML</p>
+            </div>
+            <div class="skill-card">
+                <img src="css_logo.png" alt="CSS Logo">
+                <p>CSS</p>
+            </div>
+            <!-- New Skills -->
+            <div class="skill-card">
+                <img src="javascript_logo.png" alt="JavaScript Logo">
+                <p>JavaScript</p>
+            </div>
+            <div class="skill-card">
+                <img src="react_logo.png" alt="React Logo">
+                <p>React</p>
+            </div>
+            <div class="skill-card">
+                <img src="python_logo.png" alt="Python Logo">
+                <p>Python</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
